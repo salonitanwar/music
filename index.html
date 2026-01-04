@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MelodyX</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="https://play-lh.googleusercontent.com/ukQq4kzv922yybViM7zYrSC-aQqyy_94seMjGd8SBYqDQ2ohwEHOfQxaAmqoxKG4sf9n8oxNnGs0nmxTpKy6" type="image/x-icon">
+
+</head>
+
+<body>
+
+<header>
+  <h2><i class="ri-disc-fill"></i> MelodyX Music</h2>
+  <div class="actions">
+    <button onclick="showFavorites()">❤️ Favorites</button>
+    <button onclick="openModal()">Login</button>
+  </div>
+</header>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="tabs">
+      <button class="active" onclick="loadCategory('hindi',event)">Hindi</button>
+      <button onclick="loadCategory('bollywood',event)">Bollywood</button>
+      <button onclick="loadCategory('english',event)">English</button>
+    </div>
+    <div id="songList"></div>
+  </aside>
+
+  <main class="main">
+    <div class="cover">
+      <!-- ✅ FIXED ID -->
+      <video id="video" muted loop></video>
+    </div>
+
+    <h1 id="title">Play Music</h1>
+    <p id="artist"></p>
+    <input type="range" id="progress" value="0" min="0" max="100" style="width:300px;">
+
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button id="playBtn" class="play" onclick="togglePlay()">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <audio id="audio"></audio>
+  </main>
+</div>
+
+<!-- LOGIN -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h3>Login</h3>
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="loginUser()">Login</button>
+  </div>
+</div>
+ <footer class="footer">
+  <h3>🎧For You Free Music Player</h3>
+  <p>Offline Music • No Ads •</p>
+  <span>Hindi</span>
+  <span>Bollywood</span>
+  <span>English</span>
+  <p>© 2025 | Developed By Saloni ❤️</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

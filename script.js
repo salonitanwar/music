@@ -6,6 +6,8 @@ const video=document.getElementById("video");
 const progress = document.getElementById("progress");
 const songList=document.getElementById("songList");
 
+
+
 /* SONG PROGRESS UPDATE */
 audio.addEventListener("timeupdate", () => {
   if (!isNaN(audio.duration)) {
@@ -25,7 +27,7 @@ const data={
     
   ],
   bollywood:[
-    {title:"Dil Ki Abaj",artist:"Ahaan aneet",src:"songs/song1.mp3",video:"songs/song1.mp3"},
+    {title:"Dil Ki Abaj",artist:"Ahaan aneet",src:"songs/song1.mp3",video:"songs/videoplayback.mp4"},
     {title:"Aaj Ki Rat",artist:"Taammana Bhatia",src:"songs/song2.mp3",video:"songs/song2.mp3"},
     {title:"Mashup",artist:"Arijit Singh",src:"songs/song1.mp3",video:"songs/song1.mp3"},
      {title:"Tujh Mein Rab Dikhta",artist:"Roop Kumar",src:"songs/song2.mp3",video:"songs/song2.mp3"}
